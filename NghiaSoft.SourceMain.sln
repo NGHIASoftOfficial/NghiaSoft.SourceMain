@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NghiaSoft.AuthServer", "NghiaSoft.AuthServer\NghiaSoft.AuthServer.csproj", "{06A960AF-A106-4132-A099-587F1B01299E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NghiaSoft.Core", "NghiaSoft.Core\NghiaSoft.Core.csproj", "{2854A5E2-914F-4D70-B03E-4743EE49ACD8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{06A960AF-A106-4132-A099-587F1B01299E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06A960AF-A106-4132-A099-587F1B01299E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06A960AF-A106-4132-A099-587F1B01299E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06A960AF-A106-4132-A099-587F1B01299E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2854A5E2-914F-4D70-B03E-4743EE49ACD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2854A5E2-914F-4D70-B03E-4743EE49ACD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2854A5E2-914F-4D70-B03E-4743EE49ACD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2854A5E2-914F-4D70-B03E-4743EE49ACD8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UserSecretsId>aspnet-NghiaSoft.AuthServer-00372B25-DA79-47F6-A4B5-A5D02B40141C</UserSecretsId>
+        <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="6.0.22" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.22" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.22" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.22" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.22" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.22" />
+        <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.16" />
+        <PackageReference Include="OpenIddict" Version="4.8.0" />
+        <PackageReference Include="OpenIddict.AspNetCore" Version="4.8.0" />
+        <PackageReference Include="OpenIddict.EntityFrameworkCore" Version="4.8.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\NghiaSoft.Core\NghiaSoft.Core.csproj" />
+    </ItemGroup>
+
+</Project>

@@ -1,0 +1,44 @@
+:root {
+    /*--swiper-theme-color: #F00;*/
+    --primary-color: #f58634;
+    --secondary-color: #fdd028;
+}
+
+.signup-area::before {
+    /*background: var(--primary-color);*/
+    background: #757F9A; /* fallback for old browsers */
+    background: radial-gradient(#D7DDE8, #757F9A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.handle-preloader .animation-preloader .spinner {
+    background: var(--primary-color); /* fallback for old browsers */
+    background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
+}
+
+.handle-preloader .animation-preloader .txt-loading .letters-loading {
+    color: var(--primary-color);
+}
+
+.signup-form-wrapper form input[type=submit] {
+    background: var(--primary-color); /* fallback for old browsers */
+    background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #000;
+}
+
+.auth-container .nav-item {
+    width: 100%;
+}
+
+.auth-container .nav-item .nav-link {
+    color: var(--primary-color);
+}
+
+.auth-container .nav-item .active {
+    background: var(--primary-color); /* fallback for old browsers */
+    background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
+    color: #000;
+    text-transform: uppercase;
+    font-weight: bold;
+}

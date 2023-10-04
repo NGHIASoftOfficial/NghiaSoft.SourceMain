@@ -1,0 +1,90 @@
+﻿@page
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Log in";
+}
+
+<form id="account" method="post">
+    <div class="inpput-group-item">
+        <label asp-for="Input.Email"></label>
+        <div class="input-field">
+            <span>
+                <i class="fa-solid fa-envelope"></i>
+            </span>
+            <input asp-for="Input.Email" autocomplete="username" aria-required="true"/>
+        </div>
+        <span asp-validation-for="Input.Email" class="text-danger"></span>
+    </div>
+
+    <div class="inpput-group-item">
+        <div class="d-flex justify-content-between">
+            <label asp-for="Input.Password"></label>
+            <a id="forgot-password" asp-page="./ForgotPassword">Forgot your password?</a>
+        </div>
+        <div class="input-field">
+            <span>
+                <i class="fa-solid fa-lock"></i>
+            </span>
+            <input asp-for="Input.Password" autocomplete="current-password" aria-required="true"/>
+        </div>
+        <span asp-validation-for="Input.Password" class="text-danger"></span>
+    </div>
+    <div class="checkbox-wraper d-flex align-items-center">
+        <input type="checkbox" asp-for="Input.RememberMe">
+        <label asp-for="Input.RememberMe" class="ms-2">@Html.DisplayNameFor(m => m.Input.RememberMe)</label>
+    </div>
+    <input id="login-submit" type="submit" class="submit-btn" value="Login"/>
+</form>
+<div class="signup-form-spacer overflow-hidden text-center mt-30">
+    <h6 class="position-relative d-inline-block">Or Sign Up With</h6>
+</div>
+<div class="api-signup-btns d-flex align-items-center justify-content-center mt-3 flex-wrap">
+    <a href="#" class="btn btn-facebook"><i class="fab fa-facebook-f"></i>Facebook</a>
+    <a href="#" class="btn btn-linkedin"><i class="fab fa-linkedin"></i>Google</a>
+    <a href="#" class="btn btn-twitter"><i class="fab fa-twitter"></i>Twitter</a>
+</div>
+<div class="page-redirect text-center mt-30">
+    @* <a id="resend-confirmation" asp-page="./ResendEmailConfirmation">Resend email confirmation</a> *@
+    <p>Don't have an account? <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Signup</a></p>
+</div>
+@* <div class="row"> *@
+@*      *@
+@*     <div class="col-md-6 col-md-offset-2"> *@
+@*         <section> *@
+@*             <h3>Use another service to log in.</h3> *@
+@*             <hr/> *@
+@*             @{ *@
+@*                 if ((Model.ExternalLogins?.Count ?? 0) == 0) *@
+@*                 { *@
+@*                     <div> *@
+@*                         <p> *@
+@*                             There are no external authentication services configured. See this *@
+@*                             <a href="https://go.microsoft.com/fwlink/?LinkID=532715"> *@
+@*                                 article *@
+@*                                 about setting up this ASP.NET application to support logging in via external services *@
+@*                             </a>. *@
+@*                         </p> *@
+@*                     </div> *@
+@*                 } *@
+@*                 else *@
+@*                 { *@
+@*                     <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form-horizontal"> *@
+@*                         <div> *@
+@*                             <p> *@
+@*                                 @foreach (var provider in Model.ExternalLogins!) *@
+@*                                 { *@
+@*                                     <button type="submit" class="btn btn-primary" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button> *@
+@*                                 } *@
+@*                             </p> *@
+@*                         </div> *@
+@*                     </form> *@
+@*                 } *@
+@*             } *@
+@*         </section> *@
+@*     </div> *@
+@* </div> *@
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial"/>
+}
