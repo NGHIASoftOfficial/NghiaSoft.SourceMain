@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NghiaSoft.Core", "NghiaSoft
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NghiaSoft.FileServerAPI", "NghiaSoft.FileServerAPI\NghiaSoft.FileServerAPI.csproj", "{073984B6-B1CA-430B-93FD-7FAC6AB1EF9A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NghiaSoft.Web", "NghiaSoft.Web\NghiaSoft.Web.csproj", "{22BB348B-597B-447B-94B0-A3ACC6C120CF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{073984B6-B1CA-430B-93FD-7FAC6AB1EF9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{073984B6-B1CA-430B-93FD-7FAC6AB1EF9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{073984B6-B1CA-430B-93FD-7FAC6AB1EF9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22BB348B-597B-447B-94B0-A3ACC6C120CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22BB348B-597B-447B-94B0-A3ACC6C120CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22BB348B-597B-447B-94B0-A3ACC6C120CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22BB348B-597B-447B-94B0-A3ACC6C120CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -9,47 +9,868 @@
     <projectFile profileName="NghiaSoft.MailServer">NghiaSoft.MailServer/NghiaSoft.MailServer.csproj</projectFile>
     <projectFile profileName="IIS Express">NghiaSoft.MessageQueue/NghiaSoft.MessageQueue.csproj</projectFile>
     <projectFile profileName="NghiaSoft.MessageQueue">NghiaSoft.MessageQueue/NghiaSoft.MessageQueue.csproj</projectFile>
+    <projectFile profileName="IIS Express">NghiaSoft.Web/NghiaSoft.Web.csproj</projectFile>
+    <projectFile profileName="NghiaSoft.Web">NghiaSoft.Web/NghiaSoft.Web.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cffe0435-58f5-47ea-8f13-b9fd1e88bd80" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/NghiaSoft.Core/IdentityServer/ApiClientConnector.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NghiaSoft.FileServerAPI/.dockerignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NghiaSoft.FileServerAPI/Common/AppConfiguration/AllowUploadValidator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NghiaSoft.FileServerAPI/Common/FileProcessHelper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NghiaSoft.FileServerAPI/Controllers/DownloadController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NghiaSoft.FileServerAPI/Controllers/FileInfoController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NghiaSoft.FileServerAPI/Controllers/HealthCheckController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NghiaSoft.FileServerAPI/Controllers/UploadController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NghiaSoft.FileServerAPI/Data/ApplicationDbContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NghiaSoft.FileServerAPI/Data/Entities/AppFileActionDetail.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NghiaSoft.FileServerAPI/Data/Entities/AppFileInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NghiaSoft.FileServerAPI/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NghiaSoft.FileServerAPI/Middlewares/AllowUploadValidatorMiddleware.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NghiaSoft.FileServerAPI/Middlewares/CommonMiddlewareHelper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NghiaSoft.FileServerAPI/Migrations/20231008091333_Init.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NghiaSoft.FileServerAPI/Migrations/20231008091333_Init.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NghiaSoft.FileServerAPI/Migrations/20231008094300_Update_Db.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NghiaSoft.FileServerAPI/Migrations/20231008094300_Update_Db.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NghiaSoft.FileServerAPI/Migrations/ApplicationDbContextModelSnapshot.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NghiaSoft.FileServerAPI/NghiaSoft.FileServerAPI.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NghiaSoft.FileServerAPI/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NghiaSoft.FileServerAPI/Properties/launchSettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NghiaSoft.FileServerAPI/appsettings.Development.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NghiaSoft.FileServerAPI/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.NghiaSoft.SourceMain/.idea/dataSources/fb6ca2b9-7104-409f-8c90-2fdf906ef3de.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NghiaSoft.SourceMain/.idea/dataSources/fb6ca2b9-7104-409f-8c90-2fdf906ef3de.xml" afterDir="false" />
+    <list default="true" id="cffe0435-58f5-47ea-8f13-b9fd1e88bd80" name="Changes" comment="Update code">
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/.dockerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/Areas/Landing/Controllers/HomeController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/Areas/Landing/Pages/Components/Header/Default.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/Areas/Landing/Views/Home/Index.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/Areas/Landing/Views/Shared/Components/LandingFooter/Default.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/Areas/Landing/Views/Shared/Components/LandingFooter/LandingFooterViewComponent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/Areas/Landing/Views/Shared/Components/LandingFooter/_LandingFooterBlock_1.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/Areas/Landing/Views/Shared/Components/LandingFooter/_LandingFooterBlock_2.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/Areas/Landing/Views/Shared/Components/LandingFooter/_LandingFooterBlock_3.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/Areas/Landing/Views/Shared/Components/LandingFooter/_LandingFooterBlock_4.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/Areas/Landing/Views/Shared/Components/LandingFooter/_LandingFooterBlock_PosAfter.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/Areas/Landing/Views/Shared/Components/LandingFooter/_LandingFooter_PreFooter.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/Areas/Landing/Views/Shared/Components/LandingHeader/Default.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/Areas/Landing/Views/Shared/Components/LandingHeader/LandingHeaderViewComponent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/Areas/Landing/Views/Shared/Components/LandingHeaderMobile/Default.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/Areas/Landing/Views/Shared/Components/LandingHeaderMobile/LandingHeaderMenuViewComponent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/Areas/Landing/Views/Shared/Components/LandingPreloader/Default.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/Areas/Landing/Views/Shared/Components/LandingPreloader/LandingPreloaderViewComponent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/Areas/Landing/Views/Shared/_Layout.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/Areas/Landing/Views/Shared/_ValidationScriptsPartial.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/Areas/Landing/Views/_ViewImports.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/Areas/Landing/Views/_ViewStart.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/Controllers/HomeController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/Models/ErrorViewModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/NghiaSoft.Web.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/Program.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/Properties/launchSettings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/Views/Home/Index.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/Views/Home/Privacy.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/Views/Shared/Error.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/Views/Shared/_Layout.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/Views/Shared/_Layout.cshtml.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/Views/Shared/_ValidationScriptsPartial.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/Views/_ViewImports.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/Views/_ViewStart.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/appsettings.Development.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/appsettings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/css/custom.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/css/main.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/css/main.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/fonts/fa-brands-400.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/fonts/fa-brands-400.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/fonts/fa-regular-400.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/fonts/fa-regular-400.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/fonts/fa-solid-900.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/fonts/fa-solid-900.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/fonts/fa-v4compatibility.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/fonts/fa-v4compatibility.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/0001.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/30-day.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/affiliate/affiliate-hero.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/affiliate/code.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/affiliate/dollar.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/affiliate/hosting.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/affiliate/landing-page.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/affiliate/phone.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/affiliate/server.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/affiliate/signup-icon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/affiliate/support.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/affiliate/tools.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/affiliate/tracking.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/affiliate/visual.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/author-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/author-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/author-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/author-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/backup.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/bd-author-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/bg-shape-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/bg-shape.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/black-friday/amplitude.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/black-friday/database.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/black-friday/laptop.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/black-friday/offer-badge.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/black-friday/pointer.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/black-friday/profitwell.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/black-friday/sitemate.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/black-friday/super-sale.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/black-friday/tempo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/black-friday/velocity.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/black-friday/wp.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/blog-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/blog-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/blog-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/blog-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/blog-grid-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/blog-grid-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/blog-grid-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/blog-grid-6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/blog-grid-7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/blog-grid-8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/blog-list-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/blog-list-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/blog-list-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/blog-list-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/brand-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/brand-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/brand-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/brand-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/brands/airbnb.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/brands/amplitude.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/brands/android.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/brands/app-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/brands/app-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/brands/app-sm-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/brands/app-sm-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/brands/app-sm-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/brands/app-sm-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/brands/app-sm-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/brands/app-sm-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/brands/app-sm-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/brands/app-sm-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/brands/capterra.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/brands/discord.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/brands/dropbox.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/brands/drupal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/brands/evernote.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/brands/gmail.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/brands/google.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/brands/hosting.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/brands/joomla.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/brands/lucky-brand.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/brands/mobile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/brands/open-bank.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/brands/osticker.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/brands/profitwell.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/brands/reddit.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/brands/sitemate-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/brands/sitemate.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/brands/slack.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/brands/softonic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/brands/stamps.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/brands/tempo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/brands/toast.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/brands/trust-pilot-black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/brands/trust-pilot-logo-black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/brands/trust-pilot-logo-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/brands/trust-pilot-logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/brands/trust-pilot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/brands/trust-pilot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/brands/ubuntu.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/brands/velocity.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/brands/windows.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/brands/wordpress.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/brands/wp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/brands/yahoo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/brands/zencart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/brands/zoomla.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/call-center.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/career/01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/career/02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/career/03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/career/check.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/career/icon-1-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/career/icon-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/career/icon-2-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/career/icon-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/career/icon-3-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/career/icon-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/career/icon-4-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/career/icon-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/client-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/client-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/client-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/client-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/client-5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/client-6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/client-7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/clock.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/cloud-hosting/award-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/cloud-hosting/award-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/cloud-hosting/award-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/cloud-hosting/award-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/cloud-hosting/award-5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/cloud-hosting/cd-man.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/cloud-hosting/cloud-icon-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/cloud-hosting/hero-vector.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/cloud-hosting/laptop-cloud.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/cloud-hosting/laptop.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/cloud-hosting/security-machine.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/cloud-hosting/server.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/consult-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/consult-man.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/contact-bg-left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/contact-bg-right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/cpanel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/data-center/cloud-linux.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/data-center/cloud-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/data-center/cloud.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/data-center/cloudflare.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/data-center/cpanel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/data-center/database-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/data-center/flag-cn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/data-center/flag-uk.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/data-center/flag-usa.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/data-center/imunify360.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/data-center/intel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/data-center/jetapps.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/data-center/jetbackup.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/data-center/latency-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/data-center/latency.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/data-center/litespeed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/data-center/lock-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/data-center/lock.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/data-center/mailchannels.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/data-center/map1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/data-center/map2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/data-center/map3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/data-center/shield-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/data-center/shield.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/data-center/spam-expert.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/data-protection.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/dedicated-home/client-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/dedicated-home/client-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/dedicated-home/desk.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/dedicated-home/hero.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/dedicated-home/server-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/dedicated-home/server-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/dedicated-server/application.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/dedicated-server/client-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/dedicated-server/client-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/dedicated-server/client-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/dedicated-server/ds-about-bg-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/dedicated-server/ds-about-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/dedicated-server/ds-cta.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/dedicated-server/enterprise-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/dedicated-server/enterprise.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/dedicated-server/ft-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/dedicated-server/ft-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/dedicated-server/ft-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/dedicated-server/ft-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/dedicated-server/ft-5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/dedicated-server/ft-6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/dedicated-server/ft-7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/dedicated-server/ft-8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/dedicated-server/google.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/dedicated-server/hero-1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/dedicated-server/hosting.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/dedicated-server/security.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/dedicated-server/server.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/dedicated-server/trust-pilot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/domain/about-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/domain/about-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/domain/about-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/domain/co-uk-original.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/domain/co-uk-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/domain/dm-hero.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/domain/dot-com-original.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/domain/dot-com-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/domain/faq.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/domain/online-original.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/domain/online-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/domain/org-original.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/domain/org-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/domain/shop-original.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/domain/shop-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/domain/support-team.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/domain/top-original.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/domain/top-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/domain/uk-original.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/domain/uk-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/email-hosting.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/email-hosting/hero-img.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/email-hosting/icons/01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/email-hosting/icons/02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/email-hosting/icons/03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/email-hosting/icons/04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/email-hosting/icons/05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/email-hosting/icons/06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/email-hosting/man.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/feature-img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/five-star.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/five-star.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/four-star.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/game-hosting/banner-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/game-hosting/banner-10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/game-hosting/banner-12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/game-hosting/banner-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/game-hosting/banner-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/game-hosting/banner-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/game-hosting/banner-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/game-hosting/banner-6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/game-hosting/banner-7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/game-hosting/banner-8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/game-hosting/banner-9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/game-hosting/gh-feedback-bg.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/game-hosting/hero-bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/game-hosting/hero.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/game-hosting/icon-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/game-hosting/icon-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/game-hosting/icon-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/game-hosting/icon-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/game-hosting/icon-5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/game-hosting/icon-6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/game-hosting/map-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/game-hosting/trustpilot-logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/game-hosting/video-bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/game-hosting/vr-glass.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/game-logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/globe.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/google.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/guarantee.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/hero-img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home10/client-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home10/client-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home10/client-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home10/ct.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home10/fd.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home10/hero.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home10/laptop.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home10/man.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home10/server.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home10/vector-man.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home2/agent.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home2/award-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home2/award-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home2/award-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home2/award-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home2/badge.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home2/blog-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home2/blog-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home2/blog-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home2/client-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home2/client-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home2/client-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home2/client-thumb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home2/hero-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home2/hero-bg.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home2/hero-circle-right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home2/hero-circle-right.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home2/hero-circle.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home2/hero-img-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home2/hero-img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home2/laptop.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home2/light-pack.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home2/map.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home2/premium-pack.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home2/server-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home2/server-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home2/server-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home2/server.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home2/service-left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home2/shape/blue-circle.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home2/shape/blue-object.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home2/shape/box-yellow.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home2/shape/box.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home2/shape/circle-half.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home2/shape/circle-outline.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home2/shape/circle.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home2/shape/curve-line.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home2/shape/feature-right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home2/shape/feature-triangle.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home2/shape/line.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home2/shape/pricing-circle.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home2/shape/red-object.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home2/shape/service-left-circle.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home2/shape/service-right-bottom.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home2/shape/tire.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home2/shape/triangle.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home2/shape/wave-lines.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home2/shape/wave.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home2/starter-pack.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home3/about-bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home3/feature-bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home3/ft-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home3/ft-10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home3/ft-11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home3/ft-12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home3/ft-13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home3/ft-14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home3/ft-15.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home3/ft-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home3/ft-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home3/ft-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home3/ft-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home3/ft-6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home3/ft-7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home3/ft-8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home3/ft-9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home3/game-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home3/game-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home3/game-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home3/game-action.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home3/game-logo-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home3/game-logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home3/gm-blog-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home3/gm-blog-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home3/gm-blog-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home3/listing-bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home3/live-match-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home3/live-match-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home3/live-match-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home3/logo-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home3/original-ft-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home3/product-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home3/product-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home3/product-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home3/product-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home3/sims-ft-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home3/star-ft-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home3/star-ft-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home3/star-ft-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home3/star-ft-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home3/vr-glass.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home4/blog.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home4/builder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home4/cta-man.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home4/ft-icon-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home4/ft-icon-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home4/ft-icon-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home4/ft-icon-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home4/ft-icon-5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home4/ft-icon-6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home4/laptop-server.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home4/product-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home4/product-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home4/product-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home4/product-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home4/rocket.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home4/transfer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home5/Vector.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home5/about-icon-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home5/about-icon-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home5/author-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home5/badge.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home5/blog-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home5/blog-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home5/blog-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home5/building.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home5/client-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home5/ft-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home5/home5-curve-bottom.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home5/icon-1-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home5/icon-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home5/icon-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home5/icon-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home5/icon-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home5/icon-5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home5/icon-6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home5/lock.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home5/server-wordpress.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home7/about.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home7/hero-slide-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home7/hero-slide-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home7/hero-slide-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home7/man.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home7/moving.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home7/site-builder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home7/transfer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home9/blog-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home9/blog-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home9/blog-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home9/flag-singapure.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home9/flag-usa.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home9/ft-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home9/hero.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/home9/map-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/icons/air-plan.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/icons/arrow.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/icons/cap-shape.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/icons/cloud-settings.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/icons/cloud.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/icons/dollars.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/icons/gear-check.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/icons/gear.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/icons/icon-1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/icons/icon-2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/icons/icon-3.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/icons/icon-4.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/icons/icon-5.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/icons/icon-6.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/icons/lock.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/icons/magnify-arrow.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/icons/magnify.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/icons/meter.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/icons/panel.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/icons/reseller.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/icons/search-cloud.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/icons/search-web.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/icons/search-wp.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/icons/search.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/icons/server.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/icons/settings.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/icons/store.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/icons/vps-server.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/laptop.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/live-chat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/logo-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/luckybrand.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/mastercard.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/migrate.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/minimal-hosting/blog-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/minimal-hosting/blog-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/minimal-hosting/blog-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/minimal-hosting/client-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/minimal-hosting/client-lg-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/minimal-hosting/client-lg-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/minimal-hosting/client-lg-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/minimal-hosting/client-lg-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/minimal-hosting/client-lg-5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/minimal-hosting/clients.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/minimal-hosting/laptop-girl.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/openbank.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/payoneer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/paypal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/perform.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/pricing/cloud.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/pricing/dedicated.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/pricing/hosting.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/pricing/server.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/reseller-hosting/bg-curve.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/reseller-hosting/feedback-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/reseller-hosting/hero-bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/reseller-hosting/laptop-man.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/rs-blog-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/rs-blog-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/rs-blog-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/server-1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/server-2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/server.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/about-title-shape.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/app-shape.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/arrow-blue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/arrow-dark.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/arrow-gray.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/arrow-shape.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/arrow-sm-blue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/arrow-sm-yellow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/arrow-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/arrow-yellow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/arrow.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/bf-dots-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/bf-line-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/bf-line.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/bg-shape.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/black-circle-left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/black-circle-right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/black-cta-circle-left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/black-cta-circle-right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/black-cta-line.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/black-cta-rectangle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/box-shape.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/box-shape.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/call-to-action-circle-bottom.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/call-to-action-circle-top.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/circle-blue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/circle-double-half.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/circle-group.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/circle-with-frame.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/circle.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/cloud-shape.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/color-blur.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/contact-hero-left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/cpanel-building.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/cpanel-curve.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/curve-gradient.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/curve-line.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/dc-map.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/dm-about-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/dm-about-left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/dm-domain-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/dm-object.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/dotted-blue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/ds-cta-circle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/ds-cta-dots.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/ds-cta-rectangle.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/em-feature-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/em-host-arrow-lg.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/em-host-wave-left.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/em-host-wave-right.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/feedback-circle.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/flower.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/frame.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/gift-box-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/gift-box.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/gm-about-blur.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/gm-blog-circle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/gm-blog-gradient-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/gm-blog-gradient-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/gm-blog-gradient-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/gm-blog-gradient.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/gm-blog-gradient.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/gm-circle-linear.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/gm-contact-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/gm-net-shape.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/gm-product-shape.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/gm-star.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/gm-subtitle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/gm-title-left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/gm-title-right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/hero-circle-half.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/hero-circle-left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/hero-right-bottom.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/hero-right-top.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/hero-right-top.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/hm7-doted.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/home4-cta-shape.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/home4-cta-shape.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/home4-hero-shape.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/home5-curve-bottom-black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/home5-curve-bottom.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/home5-curve-reverse-black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/home5-curve-reverse.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/home5-hero-curve-black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/home5-hero-curve.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/home5-hero-left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/home5-hero-right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/line-red-top.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/line-red.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/line-shape-blue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/line-shape.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/line-wave.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/live.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/map-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/maps-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/mb-circle-left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/mb-circle-right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/message.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/migrate-frame.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/migrate-shape-1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/mn-features-black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/mn-features.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/mn-hero-circle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/paper-pen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/phone.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/plus-rounded.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/plus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/poll.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/pricing-badge.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/pricing-pro-badge.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/quote-icon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/rs-award-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/rs-doted.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/rs-hero-browser.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/rs-lock-shape.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/rs-power-btn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/sb-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/sb-circle-half.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/sb-circle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/sb-right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/section-curve.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/section-curve.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/server-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/server-line-shape.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/service-shape.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/sh-about-circle-small.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/sh-about-circle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/sh-about-right-dark.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/sh-about-right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/sh-cpanel-circle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/sh-hero-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/sh-pricing-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/sidebar-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/slice.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/star-yellow.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/title-shape-left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/title-shape-right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/vps-about-shape.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/vps-feature-shape.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/vps-hero-shape.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/vps-pricing-line.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/vps-scripts-bg-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/vps-scripts-bg-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/wav-net-bg.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/wave.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/wp-about-circle-half.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/wp-about-curve-1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/wp-about-curve-2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/wp-about-dots.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/wp-about-tire.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/wp-feedback-bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/wp-hero-dot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/wp-hero-left-1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/wp-hero-left-2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/wp-hero-left.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/wp-signup-left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shapes/yellow-dotted.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shared-hosting.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shared-hosting/client-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shared-hosting/client-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shared-hosting/client-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shared-hosting/headphone-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shared-hosting/headphone.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shared-hosting/laptop.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shared-hosting/man-speed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shared-hosting/server-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shared-hosting/server.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shared-hosting/sh-hero.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shared-hosting/ssd-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shared-hosting/ssd.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shared-hosting/support.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/shield.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/signup-bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/softonic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/star-5.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/star-yellow.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/technology.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/three-star.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/two-star.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/user-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/user-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/user-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/visa.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/vps-hosting.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/vps-hosting/award-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/vps-hosting/award.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/vps-hosting/bandwidth-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/vps-hosting/bandwidth.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/vps-hosting/drupal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/vps-hosting/folder-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/vps-hosting/folder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/vps-hosting/gear-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/vps-hosting/gear.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/vps-hosting/globe-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/vps-hosting/globe.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/vps-hosting/joomla.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/vps-hosting/moodle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/vps-hosting/osticket.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/vps-hosting/package-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/vps-hosting/package.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/vps-hosting/panel-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/vps-hosting/panel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/vps-hosting/processor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/vps-hosting/ram.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/vps-hosting/speed-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/vps-hosting/speed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/vps-hosting/speedometer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/vps-hosting/ssd-2-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/vps-hosting/ssd-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/vps-hosting/ssd-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/vps-hosting/ssd-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/vps-hosting/ssd.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/vps-hosting/video-bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/vps-hosting/vps-hero.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/vps-hosting/wp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/vps-hosting/zencart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/web-hosting.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/windows-hosting.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/wp-hosting.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/wp-hosting/award-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/wp-hosting/award-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/wp-hosting/award.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/wp-hosting/building.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/wp-hosting/cursor-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/wp-hosting/cursor-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/wp-hosting/cursor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/wp-hosting/feature-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/wp-hosting/feature-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/wp-hosting/feature.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/wp-hosting/gear-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/wp-hosting/gear-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/wp-hosting/gear.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/wp-hosting/hero-img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/wp-hosting/phone-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/wp-hosting/phone-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/wp-hosting/phone.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/wp-hosting/rocket-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/wp-hosting/rocket-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/wp-hosting/rocket.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/wp-hosting/server-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/wp-hosting/server-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/wp-hosting/server.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/wp-hosting/shield-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/wp-hosting/shield-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/wp-hosting/shield.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/wp-hosting/update-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/wp-hosting/update-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/img/wp-hosting/update.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/js/app.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/js/vendors/bootstrap-slider.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/js/vendors/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/js/vendors/countdown.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/js/vendors/counterup.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/js/vendors/easing.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/js/vendors/isotop.pkgd.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/js/vendors/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/js/vendors/magnific-popup.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/js/vendors/massonry.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/js/vendors/popper.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/js/vendors/swiper.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/js/vendors/waypoints.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/css/site.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/js/site.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/lib/bootstrap/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/lib/bootstrap/dist/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/lib/bootstrap/dist/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/lib/jquery-validation/LICENSE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/lib/jquery-validation/dist/additional-methods.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/lib/jquery-validation/dist/additional-methods.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/lib/jquery-validation/dist/jquery.validate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/lib/jquery/LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/lib/jquery/dist/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/lib/jquery/dist/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NghiaSoft.Web/wwwroot/lib/jquery/dist/jquery.min.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NghiaSoft.SourceMain/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NghiaSoft.SourceMain/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NghiaSoft.AuthServer/Areas/Identity/Pages/Account/Login.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NghiaSoft.AuthServer/Areas/Identity/Pages/Account/Login.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NghiaSoft.AuthServer/Controllers/AuthorizationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NghiaSoft.AuthServer/Controllers/AuthorizationController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NghiaSoft.AuthServer/NghiaSoft.AuthServer.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/NghiaSoft.AuthServer/NghiaSoft.AuthServer.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NghiaSoft.AuthServer/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NghiaSoft.AuthServer/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NghiaSoft.AuthServer/TestData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NghiaSoft.AuthServer/TestData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NghiaSoft.Core/NghiaSoft.Core.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/NghiaSoft.Core/NghiaSoft.Core.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NghiaSoft.SourceMain.sln" beforeDir="false" afterPath="$PROJECT_DIR$/NghiaSoft.SourceMain.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="WARN_ABOUT_CRLF" value="false" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4626ed9f606e4dd5ae326c506cea9a48d7a00/8b/2e797637/IMailService.cs" root0="SKIP_HIGHLIGHTING" />
@@ -64,6 +885,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/935e66a6574e2cf71cfe8cf76c3db9ce3625cbc85772b0e7c24f18b6b1dc0e9/OpenIddictApplicationDescriptor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/b1d8ea2ef040e2f7d271df55c8ab95864363cad768f2153833f8ba6c43aaa/IEmailSender.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d86844615993e9b151a8dd27fb483248bfcf12be2da997d5c3152af61e3ef/OptionsConfigurationServiceCollectionExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NghiaSoft.Web/wwwroot/assets/css/main.css.map" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -76,18 +898,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.C#&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="Publish to folder.Publish NghiaSoft.FileServerAPI to folder">
+}]]></component>
+  <component name="RunManager" selected=".NET Launch Settings Profile.NghiaSoft.Web">
     <configuration name="Publish NghiaSoft.AuthServer to folder" type="DotNetFolderPublish" factoryName="Publish to folder">
       <riderPublish configuration="Release" platform="Any CPU" runtime="Portable" target_folder="$PROJECT_DIR$/NghiaSoft.AuthServer/bin/Release/net6.0/publish" target_framework="net6.0" uuid_high="480021142728753458" uuid_low="-6874366053267199586" />
       <method v="2" />
@@ -216,6 +1038,36 @@
         <option name="Build" />
       </method>
     </configuration>
+    <configuration name="NghiaSoft.Web" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/NghiaSoft.Web/NghiaSoft.Web.csproj" />
+      <option name="LAUNCH_PROFILE_TFM" value="net6.0" />
+      <option name="LAUNCH_PROFILE_NAME" value="NghiaSoft.Web" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="GENERATE_APPLICATIONHOST_CONFIG" value="1" />
+      <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
+      <option name="SEND_DEBUG_REQUEST" value="1" />
+      <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
+    <configuration name="NghiaSoft.Web: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/NghiaSoft.Web/NghiaSoft.Web.csproj" />
+      <option name="LAUNCH_PROFILE_TFM" value="net6.0" />
+      <option name="LAUNCH_PROFILE_NAME" value="IIS Express" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="GENERATE_APPLICATIONHOST_CONFIG" value="1" />
+      <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
+      <option name="SEND_DEBUG_REQUEST" value="1" />
+      <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -233,6 +1085,7 @@
       <workItem from="1696689593889" duration="34000" />
       <workItem from="1696745696812" duration="9181000" />
       <workItem from="1696756124174" duration="2706000" />
+      <workItem from="1696781100713" duration="5666000" />
     </task>
     <task id="LOCAL-00001" summary="Add code">
       <created>1696435259942</created>
@@ -241,7 +1094,14 @@
       <option name="project" value="LOCAL" />
       <updated>1696435259942</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Update code">
+      <created>1696781225256</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1696781225256</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -264,6 +1124,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Add code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add code" />
+    <MESSAGE value="Update code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update code" />
   </component>
 </project>
