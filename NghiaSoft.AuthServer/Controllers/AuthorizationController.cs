@@ -1,7 +1,6 @@
 using System.Security.Claims;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -27,25 +26,24 @@ public class AuthorizationController : Controller
     [IgnoreAntiforgeryToken]
     public async Task<IActionResult> Authorize()
     {
+        var user = await _userManager.GetUserAsync(User);
+
         var request = HttpContext.GetOpenIddictServerRequest() ??
                       throw new InvalidOperationException("The OpenID Connect request cannot be retrieved.");
 
-        if (User.Identity is { IsAuthenticated: false })
+        // Check if the user is authenticated and return a challenge if not
+        if (user == null)
         {
             return Challenge(
                 properties: new AuthenticationProperties
                 {
-                    RedirectUri = Request.PathBase + Request.Path + QueryString.Create(
-                        Request.HasFormContentType ? Request.Form.ToList() : Request.Query.ToList())
-                },
-                authenticationSchemes: CookieAuthenticationDefaults.AuthenticationScheme);
+                    RedirectUri = Request.PathBase + Request.Path + Request.QueryString
+                });
         }
 
-        var user = await _userManager.FindByNameAsync(User.Identity.Name);
-
-        // Signing in with the OpenIddict authentiction scheme trigger OpenIddict to issue a code (which can be exchanged for an access token)
-
-        return SignIn(CreateClaimsPrincipal(request, user), OpenIddictServerAspNetCoreDefaults.AuthenticationScheme);
+        // Signing in with the OpenIddict authentication scheme triggers OpenIddict to issue a code.
+        return SignIn(CreateClaimsPrincipal(request, user),
+            OpenIddictServerAspNetCoreDefaults.AuthenticationScheme);
     }
 
     [HttpPost("~/connect/token")]
@@ -66,7 +64,8 @@ public class AuthorizationController : Controller
             }
 
             claimsPrincipal = CreateClaimsPrincipal(request, user,
-                new Claim(OpenIddictConstants.Claims.Audience, request.ClientId ?? throw new InvalidOperationException()).SetDestinations(
+                new Claim(OpenIddictConstants.Claims.Audience,
+                    request.ClientId ?? throw new InvalidOperationException()).SetDestinations(
                     OpenIddictConstants.Destinations.AccessToken));
         }
 
@@ -78,9 +77,11 @@ public class AuthorizationController : Controller
             var identity = new ClaimsIdentity(OpenIddictServerAspNetCoreDefaults.AuthenticationScheme);
 
             // Subject (sub) is a required field, we use the client id as the subject identifier here.
-            _ = identity.AddClaim(OpenIddictConstants.Claims.Subject, request.ClientId ?? throw new InvalidOperationException(),
+            _ = identity.AddClaim(OpenIddictConstants.Claims.Subject,
+                request.ClientId ?? throw new InvalidOperationException(),
                 OpenIddictConstants.Destinations.AccessToken);
-            _ = identity.AddClaim(OpenIddictConstants.Claims.Audience, request.ClientId ?? throw new InvalidOperationException(),
+            _ = identity.AddClaim(OpenIddictConstants.Claims.Audience,
+                request.ClientId ?? throw new InvalidOperationException(),
                 OpenIddictConstants.Destinations.AccessToken);
 
             claimsPrincipal = new ClaimsPrincipal(identity);
@@ -93,7 +94,7 @@ public class AuthorizationController : Controller
             // Retrieve the claims principal stored in the authorization code
             claimsPrincipal =
                 (await HttpContext.AuthenticateAsync(OpenIddictServerAspNetCoreDefaults.AuthenticationScheme))
-                .Principal;
+                .Principal ?? throw new InvalidOperationException("13");
         }
 
         else if (request.IsRefreshTokenGrantType())
@@ -101,7 +102,7 @@ public class AuthorizationController : Controller
             // Retrieve the claims principal stored in the refresh token.
             claimsPrincipal =
                 (await HttpContext.AuthenticateAsync(OpenIddictServerAspNetCoreDefaults.AuthenticationScheme))
-                .Principal;
+                .Principal ?? throw new InvalidOperationException("14");
         }
 
         else
@@ -117,7 +118,8 @@ public class AuthorizationController : Controller
     [HttpGet("~/connect/userinfo")]
     public async Task<IActionResult> Userinfo()
     {
-        var claimsPrincipal = (await HttpContext.AuthenticateAsync(OpenIddictServerAspNetCoreDefaults.AuthenticationScheme)).Principal;
+        var claimsPrincipal =
+            (await HttpContext.AuthenticateAsync(OpenIddictServerAspNetCoreDefaults.AuthenticationScheme)).Principal;
 
         return Ok(new
         {
@@ -157,7 +159,8 @@ public class AuthorizationController : Controller
             // new Claim(OpenIddictConstants.Claims.Birthdate, user.Birthday?.ToString("MM/dd/yyyy") ?? "").SetDestinations(OpenIddictConstants.Destinations.AccessToken),
             //new Claim(OpenIddictConstants.Claims.Gender, user.Gender.ToString()).SetDestinations(OpenIddictConstants
             //    .Destinations.AccessToken),
-            new Claim(OpenIddictConstants.Claims.Name, user.UserName).SetDestinations(OpenIddictConstants.Destinations.IdentityToken, OpenIddictConstants.Destinations.AccessToken),
+            new Claim(OpenIddictConstants.Claims.Name, user.UserName).SetDestinations(
+                OpenIddictConstants.Destinations.IdentityToken, OpenIddictConstants.Destinations.AccessToken),
             new(OpenIddictConstants.Claims.Subject, user.Id),
         };
 

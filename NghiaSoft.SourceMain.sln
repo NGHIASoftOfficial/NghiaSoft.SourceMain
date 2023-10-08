@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NghiaSoft.AuthServer", "Ngh
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NghiaSoft.Core", "NghiaSoft.Core\NghiaSoft.Core.csproj", "{2854A5E2-914F-4D70-B03E-4743EE49ACD8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NghiaSoft.FileServerAPI", "NghiaSoft.FileServerAPI\NghiaSoft.FileServerAPI.csproj", "{073984B6-B1CA-430B-93FD-7FAC6AB1EF9A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{2854A5E2-914F-4D70-B03E-4743EE49ACD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2854A5E2-914F-4D70-B03E-4743EE49ACD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2854A5E2-914F-4D70-B03E-4743EE49ACD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{073984B6-B1CA-430B-93FD-7FAC6AB1EF9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{073984B6-B1CA-430B-93FD-7FAC6AB1EF9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{073984B6-B1CA-430B-93FD-7FAC6AB1EF9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{073984B6-B1CA-430B-93FD-7FAC6AB1EF9A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

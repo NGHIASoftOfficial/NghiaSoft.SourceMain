@@ -111,54 +111,42 @@ namespace NghiaSoft.AuthServer.Areas.Identity.Pages.Account
 
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
 
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid) return Page();
+            
+            // This doesn't count login failures towards account lockout
+            // To enable password failures to trigger account lockout, set lockoutOnFailure: true
+            var foundUser = await _signInManager.UserManager.FindByEmailAsync(Input.Email);
+            var result = await _signInManager.PasswordSignInAsync(foundUser?.UserName ?? Input.Email,
+                Input.Password, Input.RememberMe, lockoutOnFailure: true);
+            if (result.Succeeded)
             {
-                // This doesn't count login failures towards account lockout
-                // To enable password failures to trigger account lockout, set lockoutOnFailure: true
-                var foundUser = await _signInManager.UserManager.FindByEmailAsync(Input.Email);
-                var result = await _signInManager.PasswordSignInAsync(foundUser?.UserName ?? Input.Email,
-                    Input.Password, Input.RememberMe, lockoutOnFailure: true);
-                if (result.Succeeded)
+                if (Url.IsLocalUrl(returnUrl))
                 {
-                    // // Update here
-                    // var claims = new List<Claim>
-                    // {
-                    //     new Claim(ClaimTypes.Name, foundUser?.UserName ?? "")
-                    // };
-                    //
-                    // var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-                    //
-                    // await HttpContext.SignInAsync(new ClaimsPrincipal(claimsIdentity));
-
-                    if (Url.IsLocalUrl(returnUrl))
-                    {
-                        return LocalRedirect(returnUrl);
-                    }
-
-                    _logger.LogInformation("User logged in.");
-                    return RedirectToPage("./Manage/Index");
+                    return LocalRedirect(returnUrl);
                 }
 
-                if (result.RequiresTwoFactor)
-                {
-                    return RedirectToPage("./LoginWith2fa",
-                        new { ReturnUrl = returnUrl, RememberMe = Input.RememberMe });
-                }
+                _logger.LogInformation("User logged in.");
+                return RedirectToPage("./Manage/Index");
+            }
 
-                if (result.IsLockedOut)
-                {
-                    _logger.LogWarning("User account locked out.");
-                    return RedirectToPage("./Lockout");
-                }
-                else
-                {
-                    ModelState.AddModelError(string.Empty, "Invalid login attempt.");
-                    return Page();
-                }
+            if (result.RequiresTwoFactor)
+            {
+                return RedirectToPage("./LoginWith2fa",
+                    new { ReturnUrl = returnUrl, RememberMe = Input.RememberMe });
+            }
+
+            if (result.IsLockedOut)
+            {
+                _logger.LogWarning("User account locked out.");
+                return RedirectToPage("./Lockout");
+            }
+            else
+            {
+                ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+                return Page();
             }
 
             // If we got this far, something failed, redisplay form
-            return Page();
         }
     }
 }
